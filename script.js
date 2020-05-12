@@ -1,10 +1,11 @@
 var notfoundtag=document.querySelector('.notfound');
+
 class Weather{
     constructor(){}
 async  getcity(city)
 {
     console.log(city);
-    const link='http://dataservice.accuweather.com/locations/v1/cities/search';
+    const link='https://dataservice.accuweather.com/locations/v1/cities/search';
     const key='Ot5sL8vPFxkxv7Zm9fhLW58j7G0K9Rwi';
     const query=`?apikey=${key}&q=${city}`;
     const response =await fetch(link+query);
@@ -14,7 +15,7 @@ async  getcity(city)
 async  getWeather(citycode)
 {
     console.log(citycode);
-    const link2='http://dataservice.accuweather.com/currentconditions/v1/';
+    const link2='https://dataservice.accuweather.com/currentconditions/v1/';
     const key2='Ot5sL8vPFxkxv7Zm9fhLW58j7G0K9Rwi';
     const query=`${citycode}?apikey=${key2}`;
     const response=await fetch(link2+query);
