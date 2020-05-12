@@ -58,13 +58,10 @@ const getdata=()=>
 }
 const image=(weather)=>
 {
-    console.log(weather);
     imgtag.width="100";
     imgtag.height="100";
-    console.log('1.'+weather.includes('cloud'));
-    if(weather.includes('Cloud'))
+    if(weather.includes('Cloud')&&weather.includes('Sun'))
     {
-        console.log('1.'+weather.includes('cloud'));
         imgtag.src ='images/partlysunny.jpg';
     }
     else if(weather.includes('Sunny')){
@@ -74,7 +71,7 @@ const image=(weather)=>
     {
         imgtag.src='images/rainy.jpg';
     }
-    else if(weather.includes('Fog'))
+    else if(weather.includes('Fog')||weather.includes('Cloudy'))
     {
         imgtag.src='images/foggy.jpg';
     }
