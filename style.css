@@ -1,0 +1,65 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.data
+{
+    text-align: center;;
+}
+h1
+{
+    font-family: 'Markazi Text', serif;
+    font-size: 50px;
+    padding: 7px;
+    margin-bottom: 10px;
+    color:rgb(0, 65, 161);
+}
+input{
+    font-size: 140%;
+    margin-top: 10px;
+}
+.weatherdata
+{
+    margin-top:15px;
+    font-size: 150%;
+}
+.weatherdata div
+{
+    padding: 5px;
+}
+.place
+{
+    font-size: 200%;
+    color:rgb(247, 72, 3);
+}
+.weather
+{
+    margin-top: 25px;
+}
+.image
+{
+    display: inline-flex;
+}
+.temp
+{
+    margin-top: 5px;
+    font-size: 200%;
+}
+.cf,.fc
+{
+    margin-top: 10px;
+    font-size: 70%;
+    cursor: pointer;
+}
+.notfound
+{
+    margin-top: 10px;
+    font-size: 130%;;
+}
+@media only screen and (max-width:767px)
+{
+    .place{
+        font-size: 150%;
+       }
+}
