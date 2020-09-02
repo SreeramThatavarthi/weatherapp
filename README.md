@@ -9,4 +9,4 @@
 <img src="overview.png" style="border-radius:8px">
 </p>
 
-[Check it out here]= https://sreeramthatavarthi.github.io/weatherapp/
+[Check it out here] : https://sreeramthatavarthi.github.io/weatherapp/
