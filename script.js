@@ -1,4 +1,5 @@
 var notfoundtag=document.querySelector('.notfound');
+const placetage=document.querySelector('.place');
 
 class Weather{
     constructor(){}
@@ -24,9 +25,14 @@ async  getWeather(citycode)
 }
 async updateCity(city1){
     const citydata=await this.getcity(city1);
+    console.log(citydata);
+    if(citydata == undefined){
+        placetage.style.fontSize ="100%"
+        placetage.textContent ="Sorry,We are unable to find the city";
+    }
     const weatherdata=await this.getWeather(citydata.Key);
     console.log(weatherdata);
-    console.log(citydata);
+    
     return {citydata,weatherdata};
 }
 }

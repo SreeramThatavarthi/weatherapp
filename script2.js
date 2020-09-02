@@ -11,6 +11,15 @@ var data;
 document.addEventListener('keypress',function(event){
     if((event.keyCode===13||event.which===13))
         {
+        placetag.style.fontSize ="200%"
+        temptag.innerHTML="";
+        weathertag.textContent="";
+        placetag.textContent="";
+        temptag.innerHTML="";
+        cftag.style.display='none';
+        fctag.style.display='none';
+        imgtag.style.display="none";
+        imgtag.src.alt="Check whether you have correctly spelled  it";
         var city=input.value;
         console.log(city);
         input.value='';
@@ -60,6 +69,7 @@ const image=(weather)=>
 {
     imgtag.width="100";
     imgtag.height="100";
+    imgtag.style.display="block";
     if(weather.includes('Cloud')&&weather.includes('Sun'))
     {
         imgtag.src ='images/partlysunny.jpg';
