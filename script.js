@@ -9,7 +9,12 @@ async  getcity(city)
     const link='https://dataservice.accuweather.com/locations/v1/cities/search';
     const key='Ot5sL8vPFxkxv7Zm9fhLW58j7G0K9Rwi';
     const query=`?apikey=${key}&q=${city}`;
-    const response =await fetch(link+query);
+    const response =await fetch(link+query)
+    .catch((err)=>{
+        placetage.style.fontSize ="100%"
+        placetage.textContent ="Sorry,The requests to the api was over";
+    })
+    ;
     const data =await response.json()
     return data[0];
 }
@@ -19,7 +24,11 @@ async  getWeather(citycode)
     const link2='https://dataservice.accuweather.com/currentconditions/v1/';
     const key2='Ot5sL8vPFxkxv7Zm9fhLW58j7G0K9Rwi';
     const query=`${citycode}?apikey=${key2}`;
-    const response=await fetch(link2+query);
+    const response=await fetch(link2+query)
+    .catch((err)=>{
+        placetage.style.fontSize ="100%"
+        placetage.textContent ="Sorry,The requests to the api was over";
+    });
     const data=await response.json();
    return data;
 }
