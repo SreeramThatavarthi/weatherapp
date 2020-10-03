@@ -5,7 +5,7 @@
 }
 .data
 {
-    text-align: center;;
+    text-align: center;
 }
 h1
 {
@@ -15,10 +15,7 @@ h1
     margin-bottom: 10px;
     color:rgb(0, 65, 161);
 }
-input{
-    font-size: 140%;
-    margin-top: 10px;
-}
+
 .weatherdata
 {
     margin-top:15px;
