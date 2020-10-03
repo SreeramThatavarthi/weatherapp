@@ -1,5 +1,6 @@
 var notfoundtag=document.querySelector('.notfound');
 const placetage=document.querySelector('.place');
+let badge1 = document.querySelector('.b1');
 
 class Weather{
     constructor(){}
@@ -45,3 +46,14 @@ async updateCity(city1){
     return {citydata,weatherdata};
 }
 }
+
+let darkSwitch = document.querySelector('.switchBtn');
+
+// For Dark Mode
+darkSwitch.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark-mode');
+    badge1.classList.toggle('dark-mode-img');
+    // badge2.classList.toggle('dark-mode-img');
+    // badge3.classList.toggle('dark-mode-img');
+    // badge4.classList.toggle('dark-mode-img');
+});
