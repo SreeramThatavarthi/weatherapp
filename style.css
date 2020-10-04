@@ -3,6 +3,12 @@
     padding:0;
     box-sizing: border-box;
 }
+.searchdiv{
+    margin: auto;
+    width: 70%;
+    padding: 10px;
+}
+
 .data
 {
     text-align: center;
@@ -13,7 +19,7 @@ h1
     font-size: 50px;
     padding: 7px;
     margin-bottom: 10px;
-    color:rgb(0, 65, 161);
+    color:#0041a1;
 }
 
 .weatherdata
@@ -68,6 +74,7 @@ h1
     display: inline-block;
     width: 60px;
     height: 34px;
+    margin-bottom:0;
 }
 
 .switch input {

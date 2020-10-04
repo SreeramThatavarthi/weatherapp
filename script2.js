@@ -7,8 +7,33 @@ const fctag=document.querySelector('.fc');
 var notfoundtag=document.querySelector('.notfound');
 var imgtag=document.querySelector('.img');
 const w=new Weather();
+const spinner = document.querySelector(".spinner-border");
+
 var data;
+document.querySelector('.submit').addEventListener('click',(e)=>{
+    e.preventDefault();
+    placetag.style.fontSize ="200%"
+        temptag.innerHTML="";
+        weathertag.textContent="";
+        placetag.textContent="";
+        temptag.innerHTML="";
+        cftag.style.display='none';
+        fctag.style.display='none';
+        imgtag.style.display="none";
+        imgtag.src.alt="Check whether you have correctly spelled  it";
+        var city=input.value;
+        console.log(city);
+        input.value='';
+        w.updateCity(city).then(
+        res =>{console.log(res);
+        data=res;
+        notfoundtag.style.display='none';
+        getdata();
+        })
+})
 document.addEventListener('keypress',function(event){
+    spinner.classList.remove("d-none");
+    event.preventDefault();
     if((event.keyCode===13||event.which===13))
         {
         placetag.style.fontSize ="200%"
@@ -43,11 +68,12 @@ const getdata=()=>
     weathertag.textContent=`${weatherdata[0].WeatherText}`;
     placetag.textContent=`${citydata.EnglishName}, ${citydata.AdministrativeArea.EnglishName},${citydata.Country.EnglishName}`;
     console.log(data);
-    
     console.log(citydata.Country.EnglishName);
     console.log(citydata[2]);
     console.log(weatherdata[0].Temperature.Metric.Value);
     console.log(weatherdata[0].Temperature.WeatherText);
+    spinner.classList.add("d-none");
+
     cftag.addEventListener('click',function(){
         temptag.innerHTML=`
        <span>${weatherdata[0].Temperature.Imperial.Value}<span>
