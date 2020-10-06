@@ -1,70 +1,73 @@
-*{
-    margin:0;
-    padding:0;
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&family=Zilla+Slab:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-.searchdiv{
+
+.searchdiv {
     margin: auto;
     width: 70%;
     padding: 10px;
 }
 
-.data
-{
+.data {
     text-align: center;
 }
-h1
-{
+
+h1 {
     font-family: 'Markazi Text', serif;
     font-size: 50px;
     padding: 7px;
     margin-bottom: 10px;
-    color:#0041a1;
+    color: #0041a1;
 }
 
-.weatherdata
-{
-    margin-top:15px;
+.weatherdata {
+    margin-top: 15px;
     font-size: 150%;
 }
-.weatherdata div
-{
+
+.weatherdata div {
     padding: 5px;
 }
-.place
-{
+
+.place {
     font-size: 200%;
-    color:rgb(247, 72, 3);
+    color: rgb(247, 72, 3);
 }
-.weather
-{
+
+.weather {
     margin-top: 25px;
 }
-.image
-{
+
+.image {
     display: inline-flex;
 }
-.temp
-{
+
+.temp {
     margin-top: 5px;
     font-size: 200%;
 }
-.cf,.fc
-{
+
+.cf,
+.fc {
     margin-top: 10px;
     font-size: 70%;
     cursor: pointer;
 }
-.notfound
-{
+
+.notfound {
     margin-top: 10px;
-    font-size: 130%;;
+    font-size: 130%;
+    ;
 }
-@media only screen and (max-width:767px)
-{
-    .place{
+
+@media only screen and (max-width:767px) {
+    .place {
         font-size: 150%;
-       }
+    }
 }
 
 /* Toggle Switch */
@@ -74,7 +77,7 @@ h1
     display: inline-block;
     width: 60px;
     height: 34px;
-    margin-bottom:0;
+    margin-bottom: 0;
 }
 
 .switch input {
@@ -107,15 +110,15 @@ h1
     transition: .4s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
     background-color: #333;
 }
 
-input:focus + .slider {
+input:focus+.slider {
     box-shadow: 0 0 1px #333;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
@@ -128,4 +131,8 @@ input:checked + .slider:before {
 
 .dark-mode-img {
     filter: invert(90%) hue-rotate(180deg);
+}
+
+.info {
+    font-family: 'Zilla Slab', serif;
 }
